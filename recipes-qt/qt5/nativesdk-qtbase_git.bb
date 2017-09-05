@@ -114,7 +114,6 @@ do_configure() {
         -no-gui \
         -no-qml-debug \
         -no-sql-mysql \
-        -no-sql-sqlite \
         -no-opengl \
         -no-openssl \
         -no-xcb \
