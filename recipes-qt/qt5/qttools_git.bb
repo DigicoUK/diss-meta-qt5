@@ -35,15 +35,9 @@ SRCREV = "fdc5749b5603653c5d0c59db267f44fd1609457e"
 BBCLASSEXTEND = "native nativesdk"
 
 do_compile_ptest() {
-    export PATH=${STAGING_DIR_NATIVE}/usr/include/qt5:$PATH
-    cd ${S}/tests
-    qmake -o Makefile tests.pro
-    oe_runmake
+    echo do nothing
 }
 
 do_install_ptest() {
-    mkdir -p ${D}${PTEST_PATH}
-    t=${D}${PTEST_PATH}
-    cp ${S}/tests/auto/qtdiag/tst_tdiag $t
-    cp ${S}/tests/auto/qtattributionsscanner/tst_qtattributionsscanner $t
+    echo do nothing
 }
