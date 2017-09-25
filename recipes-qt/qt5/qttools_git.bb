@@ -26,7 +26,7 @@ FILES_${PN}-tools += "${datadir}${QT_DIR_NAME}/phrasebooks"
 FILES_${PN}-examples = "${datadir}${QT_DIR_NAME}/examples"
 
 PACKAGECONFIG ??= ""
-PACKAGECONFIG[qtwebkit] = ",,qtwebkit"
+# PACKAGECONFIG[qtwebkit] = ",,qtwebkit"
 
 EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'qtwebkit', '', 'CONFIG+=noqtwebkit', d)}"
 
