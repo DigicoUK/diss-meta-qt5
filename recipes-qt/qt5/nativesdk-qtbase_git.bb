@@ -81,6 +81,8 @@ FILES_${PN}-tools = " \
     ${datadir}/cmake \
 "
 
+DIRFILES = "1"
+
 # qttools binaries are placed in a subdir of bin in order to avoid
 # collisions with qt4. This would trigger debian.bbclass to rename the
 # package, since it doesn't detect binaries in subdirs. Explicitly
