@@ -49,7 +49,7 @@ INSANE_SKIP_${PN}-examples += "libdir"
 INSANE_SKIP_${PN}-examples-dbg += "libdir"
 INSANE_SKIP_${PN}-examples-dev += "libdir dev-elf"
 
-PACKAGES =. "${PN}-qmlplugins-dbg ${PN}-tools-dbg ${PN}-plugins-dbg ${PN}-qmldesigner ${PN}-qmlplugins ${PN}-tools ${PN}-plugins ${PN}-mkspecs ${PN}-examples-dev ${PN}-examples-staticdev ${PN}-examples-dbg ${PN}-examples "
+PACKAGES =. "${PN}-qmlplugins-dbg ${PN}-tools-dbg ${PN}-plugins-dbg ${PN}-qmldesigner ${PN}-qmlplugins ${PN}-tools ${PN}-plugins ${PN}-mkspecs "
 
 ALLOW_EMPTY_${PN} = "1"
 ALLOW_EMPTY_${PN}-dbg = "1"
@@ -177,39 +177,6 @@ FILES_${PN}-dbg += " \
 "
 FILES_${PN}-staticdev += " \
     ${OE_QMAKE_PATH_LIBS}/*.a \
-"
-FILES_${PN}-examples = " \
-    ${OE_QMAKE_PATH_EXAMPLES}/* \
-"
-FILES_${PN}-examples-dev = " \
-    ${OE_QMAKE_PATH_EXAMPLES}/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/*${SOLIBSDEV} \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/*/*${SOLIBSDEV} \
-"
-FILES_${PN}-examples-dbg = " \
-    ${OE_QMAKE_PATH_EXAMPLES}/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/.debug \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/*/.debug \
-"
-FILES_${PN}-examples-staticdev = " \
-    ${OE_QMAKE_PATH_EXAMPLES}/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/*.a \
-    ${OE_QMAKE_PATH_EXAMPLES}/*/*/*/*/*/*/*/*.a \
 "
 
 PATH_prepend = "${STAGING_DIR_NATIVE}${OE_QMAKE_PATH_QT_BINS}:"
