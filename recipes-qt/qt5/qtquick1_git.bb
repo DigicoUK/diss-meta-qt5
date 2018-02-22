@@ -15,8 +15,8 @@ LIC_FILES_CHKSUM = " \
 DEPENDS += "qtscript qtsvg qtxmlpatterns"
 # qttools
 
-PACKAGECONFIG ??= "webkit"
-PACKAGECONFIG[webkit] = ",,qtwebkit"
+# PACKAGECONFIG ??= "webkit"
+# PACKAGECONFIG[webkit] = ",,qtwebkit"
 
 EXTRA_QMAKEVARS_PRE += "${@bb.utils.contains('PACKAGECONFIG', 'webkit', '', 'CONFIG+=noqtwebkit', d)}"
 
