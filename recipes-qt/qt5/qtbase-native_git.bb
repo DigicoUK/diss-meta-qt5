@@ -41,7 +41,6 @@ SRC_URI += "\
 # 5.9.meta-qt5-native.4
 SRC_URI += " \
     file://0012-Always-build-uic.patch \
-    file://0013-evdevtouch_digico.patch \
 "
 
 CLEANBROKEN = "1"
