@@ -1,0 +1,13 @@
+diff --git a/src/gui/kernel/qwindowsysteminterface.cpp b/src/gui/kernel/qwindowsysteminterface.cpp
+index 13f45d236e..18e34138cd 100644
+--- a/src/gui/kernel/qwindowsysteminterface.cpp
++++ b/src/gui/kernel/qwindowsysteminterface.cpp
+@@ -573,7 +573,7 @@ QList<QTouchEvent::TouchPoint>
+     QList<QWindowSystemInterface::TouchPoint>::const_iterator point = points.constBegin();
+     QList<QWindowSystemInterface::TouchPoint>::const_iterator end = points.constEnd();
+     while (point != end) {
+-        p.setId(acquireCombinedPointId(deviceId, point->id));
++        p.setId(point->id);
+         if (point->uniqueId >= 0)
+             p.setUniqueId(point->uniqueId);
+         p.setPressure(point->pressure);
